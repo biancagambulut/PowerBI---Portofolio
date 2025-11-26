@@ -19,7 +19,12 @@
       color: #fff;
     }
 
-    /* NAVBAR BUTTONS */
+    /* BUTTONS BAR AT TOP */
+    .top-buttons {
+      text-align:center;
+      margin-top: 45px;
+    }
+
     .btn-nav {
       background: #00b4d8;
       padding: 12px 24px;
@@ -31,12 +36,8 @@
       display: inline-block;
       transition: .3s;
     }
-    .btn-nav:hover { background:#0096c7; transform: scale(1.07); }
 
-    .top-buttons {
-      text-align:center;
-      margin-top: 40px;
-    }
+    .btn-nav:hover { background:#0096c7; transform: scale(1.07); }
 
     /* CONTAINER */
     .container {
@@ -61,19 +62,6 @@
     @keyframes fade {
       from {opacity:0; transform:translateY(20px);}
       to   {opacity:1; transform:translateY(0);}
-    }
-
-    .about-box {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .about-photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 10px;
-      object-fit: cover;
     }
 
     .btn {
@@ -110,7 +98,6 @@
       gap: 12px;
       justify-content: center;
       margin-bottom: 15px;
-      animation: fade .9s;
     }
 
     .project-preview img {
@@ -143,8 +130,6 @@
     }
 
     @media(max-width:768px){
-      .about-box { flex-direction: column; text-align:center; }
-      .about-photo { width:150px;height:150px; }
       .project-preview img { width:45%; }
     }
   </style>
@@ -162,17 +147,6 @@
     <a class="btn-nav" href="#contact">Contact</a>
     <a class="btn-nav" href="https://github.com/biancagambulut" target="_blank">GitHub</a>
     <a class="btn-nav" href="#">Download CV</a>
-  </div>
-
-  <!-- ABOUT -->
-  <div class="section" id="about">
-    <div class="about-box">
-      <img src="me.jpg" class="about-photo"/>
-      <div>
-        <h2>💁🏻‍♀️ About Me</h2>
-        <p>I specialize in data visualization using Power BI and analytics.</p>
-      </div>
-    </div>
   </div>
 
   <!-- SKILLS -->
@@ -202,14 +176,15 @@
       </ul>
 
       <div class="project-preview">
-        <img src="images/1.png" onclick="openModal(this.src)">
-        <img src="images/2.png" onclick="openModal(this.src)">
-        <img src="images/3.png" onclick="openModal(this.src)">
-        <img src="images/4.png" onclick="openModal(this.src)">
+        <img src="/PowerBI---Portofolio/images/1.png" onclick="openModal(this.src)">
+        <img src="/PowerBI---Portofolio/images/2.png" onclick="openModal(this.src)">
+        <img src="/PowerBI---Portofolio/images/3.png" onclick="openModal(this.src)">
+        <img src="/PowerBI---Portofolio/images/4.png" onclick="openModal(this.src)">
       </div>
 
-      <a class="btn" href="https://biancagambulut.github.io/PowerBI---Portofolio/"
-         target="_blank">View Full Dashboard</a>
+      <a class="btn" href="https://biancagambulut.github.io/PowerBI---Portofolio/" target="_blank">
+        View Full Dashboard
+      </a>
 
     </div>
   </div>
@@ -218,10 +193,8 @@
   <div class="section" id="contact">
     <h2>📫 Contact</h2>
     <p>Email: <strong>biancagambulut@gmail.com</strong></p>
-
-    <a class="btn" href="https://www.linkedin.com/in/alexandra-bianca-gambulut-28b68a253"
-      target="_blank">LinkedIn</a>
-    <a class="btn" href="https://github.com/biancagambulut" target="_blank">Github</a>
+    <a class="btn" href="https://www.linkedin.com/in/alexandra-bianca-gambulut-28b68a253" target="_blank">LinkedIn</a>
+    <a class="btn" href="https://github.com/biancagambulut" target="_blank">GitHub</a>
   </div>
 </div>
 
