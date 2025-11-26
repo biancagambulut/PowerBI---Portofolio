@@ -6,33 +6,33 @@ The goal is to identify demographic patterns, gender distribution, and top/extre
 
 This project demonstrates skills in:
 
-Data transformation and modeling
+  -Data transformation and modeling
 
-Dimensional modeling
+  -Dimensional modeling
 
-DAX and analytical measures
+  -DAX and analytical measures
 
-Designing professional dashboards
+  -Designing professional dashboards
 
-Extracting business insights
+  -Extracting business insights
 
-Using Eurostat open data
+  -Using Eurostat open data
 
 📊 Data Source
 
-Eurostat official open datasets
+  -Eurostat official open datasets
 
-Time period: latest available years
+  -Time period: latest available years
 
-Countries included: 27 European countries
+  -Countries included: 27 European countries
 
 The data was cleaned, appended and prepared in Power BI, using:
 
-Dim Year
+  -Dim Year
 
-Dim Country
+  -Dim Country
 
-Fact Population
+  -Fact Population
 
 🧩 Data Model
 
