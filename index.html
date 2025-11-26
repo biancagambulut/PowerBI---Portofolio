@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Population Aged 0–3 Across Europe | Project Case Study</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+
+body{
+ background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+ color:white;
+ padding:60px;
+}
+
+section{
+ max-width:1100px;
+ margin:auto;
+}
+
+/* HEADER */
+.title{
+ font-size:38px;
+ font-weight:600;
+ text-align:center;
+ margin-bottom:10px;
+ animation:fadeUp .9s ease;
+}
+
+.subtitle{
+ text-align:center;
+ color:#b9b9b9;
+ font-size:18px;
+ margin-bottom:40px;
+ animation:fadeUp .9s ease;
+}
+
+/* CARD */
+.card{
+ background:rgba(255,255,255,0.06);
+ border:1px solid rgba(255,255,255,0.15);
+ border-radius:15px;
+ padding:30px;
+ margin-bottom:40px;
+ backdrop-filter:blur(10px);
+ animation:fadeUp .8s ease;
+}
+.card h2{
+ font-size:24px;
+ margin-bottom:15px;
+}
+
+ul{line-height:1.8;font-size:17px;}
+
+/* IMAGE GRID */
+.gallery{
+ display:flex;
+ gap:15px;
+ justify-content:center;
+ margin:25px 0;
+ flex-wrap:wrap;
+}
+
+.gallery img{
+ width:22%;
+ border-radius:10px;
+ cursor:pointer;
+ transition:.3s;
+ border:1px solid rgba(255,255,255,0.3);
+}
+.gallery img:hover{
+ transform:scale(1.07);
+}
+
+/* BUTTON */
+.btn{
+ background:#00b4d8;
+ padding:14px 24px;
+ border-radius:8px;
+ text-decoration:none;
+ color:#fff;
+ font-size:18px;
+ transition:.3s;
+ display:block;
+ width:250px;
+ text-align:center;
+ margin:40px auto 0;
+}
+.btn:hover{
+ background:#0096c7;
+ transform:translateY(-3px);
+}
+
+/* MODAL */
+#modal{
+ display:none;
+ position:fixed;
+ top:0;left:0;
+ width:100%;height:100%;
+ background:rgba(0,0,0,.9);
+ justify-content:center;
+ align-items:center;
+ z-index:9999;
+}
+#modal img{
+ max-width:90%;
+ max-height:90%;
+ border-radius:12px;
+}
+
+/* ANIM */
+@keyframes fadeUp{
+ from{opacity:0;transform:translateY(25px);}
+ to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<section>
+ <div class="title">Population Aged 0–3 Across Europe</div>
+ <div class="subtitle">Power BI Dashboard – Eurostat Data | Interactive Visualization</div>
+
+ <div class="card">
+  <h2>Overview</h2>
+  <p>This Power BI project analyzes the population aged 0–3 across European countries to identify patterns in:</p>
+  <ul>
+    <li>Demographic trends</li>
+    <li>Gender distribution</li>
+    <li>Top and bottom ranked countries</li>
+    <li>Average children per country</li>
+  </ul>
+
+  <div class="gallery">
+    <img src="/PowerBI---Portofolio/images/1.png" onclick="openModal(this.src)">
+    <img src="/PowerBI---Portofolio/images/2.png" onclick="openModal(this.src)">
+    <img src="/PowerBI---Portofolio/images/3.png" onclick="openModal(this.src)">
+    <img src="/PowerBI---Portofolio/images/4.png" onclick="openModal(this.src)">
+  </div>
+ </div>
+
+ <div class="card">
+  <h2>Tools & Skills</h2>
+  <ul>
+    <li>✔ Power BI & DAX</li>
+    <li>✔ Dimensional modeling</li>
+    <li>✔ Interactive slicers, drill-down</li>
+    <li>✔ Power Query data cleaning</li>
+  </ul>
+ </div>
+
+ <a class="btn" href="https://biancagambulut.github.io/PowerBI---Portofolio/" target="_blank">View Full Dashboard</a>
+</section>
+
+<div id="modal" onclick="closeModal()">
+ <img id="modalImg">
+</div>
+
+<script>
+function openModal(src){
+ modalImg.src=src;
+ modal.style.display="flex";
+}
+function closeModal(){
+ modal.style.display="none";
+}
+</script>
+
+</body>
+</html>
