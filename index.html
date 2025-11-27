@@ -115,6 +115,36 @@
       max-height:90%;
       border-radius:10px;
     }
+
+    /* What I Learned */
+    .learn-box{
+      margin-top:60px;
+      background:rgba(255,255,255,0.08);
+      padding:25px;
+      border-radius:15px;
+      backdrop-filter:blur(8px);
+      border:1px solid rgba(255,255,255,0.18);
+    }
+
+    .learn-box h3{
+      text-align:center;
+      margin-bottom:15px;
+      font-size:26px;
+      color:#e4d9ff;
+    }
+
+    .learn-box ul{
+      line-height:1.8;
+      font-size:16px;
+      color:#ddd;
+    }
+
+    /* mobile */
+    @media(max-width:768px){
+      .proj-img{width:95%;}
+      .intro{font-size:16px;}
+    }
+
   </style>
 </head>
 
@@ -136,7 +166,7 @@
   into actionable insights and comparisons.
 </p>
 
-<!-- ⭐ EMBEDED POWER BI DASHBOARD ⭐ -->
+<!-- EMBED -->
 <h3 style="text-align:center;margin-top:40px;font-size:28px;font-weight:600;color:#e4d9ff;">
   Interactive Power BI Dashboard
 </h3>
@@ -189,6 +219,19 @@
 </p>
 
   </div>
+
+  <!-- WHAT I LEARNED -->
+  <div class="learn-box">
+    <h3>🧠 What I Learned</h3>
+    <ul>
+      <li>Power BI dashboard design and storytelling</li>
+      <li>DAX calculations and data modeling</li>
+      <li>ETL and Power Query transformations</li>
+      <li>UX/UI visualization principles</li>
+      <li>Comparative analytics between countries</li>
+    </ul>
+  </div>
+
 </div>
 
 <div id="modal" onclick="closeModal()">
