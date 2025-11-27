@@ -7,10 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
 
   <style>
-    *{
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-    }
+    *{box-sizing:border-box;scroll-behavior:smooth;}
 
     body{
       font-family:"Poppins",sans-serif;
@@ -25,7 +22,7 @@
     .container{
       width:90%;
       max-width:950px;
-      margin:50px auto 60px auto;
+      margin:50px auto;
     }
 
     h2{
@@ -53,14 +50,11 @@
       font-weight:600;
       transition:.3s;
       box-shadow:0 0 10px rgba(106,0,255,0.5);
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
     }
 
     .home-btn:hover{
       background:#8b2bff;
-      box-shadow:0 0 18px #8b2bff;
+      box-shadow:0 0 15px #8b2bff;
       transform:scale(1.05);
     }
 
@@ -74,53 +68,37 @@
       text-shadow:0 0 8px rgba(150,150,255,0.35);
     }
 
-    /* IMAGINI DASHBOARD */
     .proj-img{
       width:70%;
       max-width:650px;
       display:block;
-      margin:18px auto 10px auto;
+      margin:15px auto;
       border-radius:10px;
       cursor:pointer;
-      transition:transform .3s, filter .3s;
+      transition:transform .3s;
       opacity:0;
-      animation:fadeUp 0.8s ease forwards;
+      animation:fade 1s ease forwards;
     }
 
     .proj-img:hover{
       transform:scale(1.05);
-      filter:drop-shadow(0 0 14px rgba(0,225,255,.65));
+      filter:drop-shadow(0 0 12px rgba(0,225,255,.6));
     }
 
-    /* descrieri sub imagini */
     .caption{
       text-align:center;
       max-width:700px;
-      margin:8px auto 30px auto;
+      margin:10px auto 50px auto;
       color:#ccc;
       font-size:16px;
-      opacity:0;
-      animation:fadeUp 0.9s ease forwards;
+      opacity:.9;
+      line-height:1.6;
     }
 
-    /* animație slide-in + fade */
-    @keyframes fadeUp{
+    @keyframes fade{
       from{opacity:0;transform:translateY(20px);}
       to{opacity:1;transform:translateY(0);}
     }
-
-    /* mici delay-uri ca să intre în cascadă */
-    .project-block .proj-img:nth-of-type(1){animation-delay:0.05s;}
-    .project-block .caption:nth-of-type(1){animation-delay:0.15s;}
-
-    .project-block .proj-img:nth-of-type(2){animation-delay:0.25s;}
-    .project-block .caption:nth-of-type(2){animation-delay:0.35s;}
-
-    .project-block .proj-img:nth-of-type(3){animation-delay:0.45s;}
-    .project-block .caption:nth-of-type(3){animation-delay:0.55s;}
-
-    .project-block .proj-img:nth-of-type(4){animation-delay:0.65s;}
-    .project-block .caption:nth-of-type(4){animation-delay:0.75s;}
 
     /* MODAL */
     #modal{
@@ -128,7 +106,7 @@
       position:fixed;
       top:0;left:0;
       width:100%;height:100%;
-      background:rgba(0,0,0,.85);
+      background:rgba(0,0,0,.8);
       justify-content:center;
       align-items:center;
       z-index:9999;
@@ -138,14 +116,6 @@
       max-width:90%;
       max-height:90%;
       border-radius:10px;
-      box-shadow:0 0 20px rgba(0,0,0,.8);
-    }
-
-    @media(max-width:768px){
-      .container{margin-top:35px;}
-      h2{font-size:30px;}
-      .intro{font-size:16px;}
-      .proj-img{width:95%;}
     }
   </style>
 </head>
@@ -157,55 +127,51 @@
   <h2>📊 Power BI – Population Aged 0–3 Across Europe</h2>
 
   <div style="text-align:center;margin-bottom:35px;">
-    <a class="home-btn" href="https://biancagambulut.github.io/biancagambulut.github.io/">
-      🏠 Home
-    </a>
+    <a class="home-btn" href="https://biancagambulut.github.io/biancagambulut.github.io/">🏠 Home</a>
   </div>
 
   <p class="intro">
     This Power BI project explores demographic dynamics across European countries,
     focusing on the population aged 0–3. Early childhood data is a critical indicator
     for regional development, social policy planning and future education demand.
-    Using Eurostat data and Power BI, this dashboard transforms raw demographic figures
-    into actionable insights and comparisons.
   </p>
 
   <div class="project-block">
 
     <h3>1. Continental Overview</h3>
-    <img class="proj-img" src="images/1.png" alt="Overview dashboard with KPIs for children aged 0–3 across Europe" onclick="openModal(this.src)">
+    <img class="proj-img" src="images/1.png" onclick="openModal(this.src)">
     <p class="caption">
-      The first report illustrates the total 0–3 age population across the continent.
-      It highlights the demographic size of each country and shows the distribution
-      of early childhood population. This view helps identify the largest and smallest
-      population groups, as well as overall demographic patterns at a continental level.
+      This view highlights total population aged 0–3 for each country and
+      the distribution across Europe.
     </p>
 
     <h3>2. Country Comparison</h3>
-    <img class="proj-img" src="images/2.png" alt="Country comparison report for population aged 0–3" onclick="openModal(this.src)">
+    <img class="proj-img" src="images/2.png" onclick="openModal(this.src)">
     <p class="caption">
-      The second report allows a comparative analysis between European countries.
-      Users can select a specific country and compare it to European averages.
-      This visualization supports demographic evaluation, regional inequalities
-      and helps identify where population decline or growth is most significant.
+      Compare countries against European averages and examine demographic
+      inequalities and population dynamics.
     </p>
 
     <h3>3. Gender Analysis</h3>
-    <img class="proj-img" src="images/3.png" alt="Gender analysis dashboard for boys and girls aged 0–3" onclick="openModal(this.src)">
+    <img class="proj-img" src="images/3.png" onclick="openModal(this.src)">
     <p class="caption">
-      The third dashboard breaks down the population by gender for each country.
-      This analysis reveals gender differences, trends and demographic balance.
-      Understanding these patterns is essential for social development programs
-      and long-term planning for families and education systems.
+      This report highlights gender patterns and demographic balance that influence
+      policy and long-term planning.
     </p>
 
     <h3>4. Key Insights</h3>
-    <img class="proj-img" src="images/4.png" alt="Summary of key insights and conclusions" onclick="openModal(this.src)">
+    <img class="proj-img" src="images/4.png" onclick="openModal(this.src)">
     <p class="caption">
-      The final section summarizes the key demographic insights from the entire analysis.
-      It highlights countries with the highest and lowest population in the selected group,
-      patterns by gender, and overall European trends. These findings support policy,
-      healthcare and education planning decisions at both national and continental levels.
+      Summary of the population trends: the highest and lowest countries,
+      demographic balance and key patterns.
+    </p>
+
+    <!-- NEW CARD ADDED HERE -->
+    <h3>🧠 What I Learned</h3>
+    <p class="caption">
+      I improved my skills in data modeling, dashboard building and analytical thinking.
+      I transformed raw data into powerful insights, compared countries, evaluated trends
+      and highlighted the most relevant results through interactive Power BI visuals.
     </p>
 
   </div>
@@ -213,28 +179,17 @@
 
 <!-- MODAL -->
 <div id="modal" onclick="closeModal()">
-  <img id="modalImg" alt="Dashboard preview">
+  <img id="modalImg">
 </div>
 
 <script>
-  function openModal(src){
-    const modal = document.getElementById('modal');
-    const modalImg = document.getElementById('modalImg');
-    modalImg.src = src;
-    modal.style.display = "flex";
-  }
-
-  function closeModal(){
-    const modal = document.getElementById('modal');
-    modal.style.display = "none";
-  }
-
-  // optional: close with ESC
-  document.addEventListener('keydown', function(e){
-    if(e.key === "Escape"){
-      closeModal();
-    }
-  });
+function openModal(src){
+  modalImg.src=src;
+  modal.style.display="flex";
+}
+function closeModal(){
+  modal.style.display="none";
+}
 </script>
 
 </body>
